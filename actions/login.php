@@ -9,8 +9,8 @@
         // Sessions ..
         // fetch data from database ..
         $r = mysqli_fetch_array($result); // this function converted variable into array ..
-        session_start(); // function ..
-        $_SESSION['user'] = $r['fname'];
+        session_start(); // function .. .. 
+        $_SESSION['user'] = $r['fname']; 
         // fetching ..
         Header('Location:../home.php');
     } else {
