@@ -36,7 +36,7 @@
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['gender']; ?></td>
                     <td>
-                        <button class="btn btn-success"><i class="fa fa-edit"></i></button>
+                        <a href="edit.php?id=<?php echo $row['id']; ?>"><button class="btn btn-success"><i class="fa fa-edit"></i></button></a>
                         <button class="btn btn-danger" onclick="del(this.value)" value="<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></button>
                     </td>
                 </tr>
@@ -48,7 +48,9 @@
 <script>
     function del(c){
         if(confirm("Are you sure? You want to delete") == true){
-            window.location.href ="actions/delete.php?id="+c;
+            // redirect location ..
+            var b = "actions/delete.php?id="+c;
+           window.location.href = b;
         }
     }
 </script>
